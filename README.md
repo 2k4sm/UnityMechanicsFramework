@@ -19,7 +19,6 @@ A reusable generic singleton base class for `MonoBehaviour`.
 
 Convert any script into a singleton by inheriting:
 
-```csharp
 public class GameManager : MonoSingletonGeneric<GameManager>
 {
 }
@@ -38,3 +37,5 @@ A ScriptableObject-based dialogue framework for building flexible and branching 
 
 Designed to allow rapid iteration and safe expansion of dialogue trees without modifying the core system logic.  
 New conversations can be added seamlessly while maintaining structural integrity.
+
+
