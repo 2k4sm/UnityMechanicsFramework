@@ -6,52 +6,55 @@ Instead of rewriting commonly used systems across projects, this repository cent
 
 ## 📂 Folder Structure
 
+## 📂 Folder Structure
+
+```text
 UnityMechanicsFramework/
 │
-├── package.json # UPM Manifest
+├── package.json                 # UPM Manifest
 ├── README.md
 ├── CHANGELOG.md
 ├── LICENSE
 │
 ├── Runtime/
-│ ├── Core/
-│ │ ├── MonoSingleton.cs
-│ │ ├── EventBus.cs
-│ │ └── StateMachine/
-│ │
-│ ├── Physics/
-│ │ ├── IPhysicsAdapter.cs
-│ │ ├── Physics2DAdapter.cs
-│ │ └── Physics3DAdapter.cs
-│ │
-│ ├── Movement/
-│ │ ├── ModularJumpSystem.cs
-│ │ ├── DashSystem.cs
-│ │ └── WallSlideSystem.cs
-│ │
-│ ├── Dialogue/
-│ │ ├── DialogueSystem.cs
-│ │ ├── DialogueNode.cs
-│ │ └── DialogueDatabase.cs
-│ │
-│ ├── Input/
-│ │ └── InputAdapter.cs
-│ │
-│ └── Utils/
-│ └── TimerUtility.cs
+│   ├── Core/
+│   │   ├── MonoSingleton.cs
+│   │   ├── EventBus.cs
+│   │   └── StateMachine/
+│   │
+│   ├── Physics/
+│   │   ├── IPhysicsAdapter.cs
+│   │   ├── Physics2DAdapter.cs
+│   │   └── Physics3DAdapter.cs
+│   │
+│   ├── Movement/
+│   │   ├── ModularJumpSystem.cs
+│   │   ├── DashSystem.cs
+│   │   └── WallSlideSystem.cs
+│   │
+│   ├── Dialogue/
+│   │   ├── DialogueSystem.cs
+│   │   ├── DialogueNode.cs
+│   │   └── DialogueDatabase.cs
+│   │
+│   ├── Input/
+│   │   └── InputAdapter.cs
+│   │
+│   └── Utils/
+│       └── TimerUtility.cs
 │
-├── Editor/ # Editor-only tools
-│ ├── CustomInspectors/
-│ └── PropertyDrawers/
+├── Editor/                      # Editor-only tools
+│   ├── CustomInspectors/
+│   └── PropertyDrawers/
 │
-├── Samples~/ # Example scenes & usage demos
-│ ├── JumpExample/
-│ └── DialogueExample/
+├── Samples~/                    # Example scenes & usage demos
+│   ├── JumpExample/
+│   └── DialogueExample/
 │
 └── Tests/
-├── Runtime/
-└── Editor/
-
+    ├── Runtime/
+    └── Editor/
+```
 ---
 
 ## Mechanics Library
