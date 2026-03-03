@@ -6,8 +6,6 @@ Instead of rewriting commonly used systems across projects, this repository cent
 
 ## 📂 Folder Structure
 
-## 📂 Folder Structure
-
 ```text
 UnityMechanicsFramework/
 │
