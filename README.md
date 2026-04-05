@@ -185,6 +185,7 @@ EventBus.Subscribe<PlayerJumpedEvent>(e => audioManager.PlayJumpSound());
 |---|---|---|---|---|
 | 1 | [MonoSingleton Generic](#1-monosingleton-generic) | Shubham B | Core | — |
 | 2 | [Generic & Scalable Dialogue System](#2-generic--scalable-dialogue-system) | Mayur | Dialogue | [▶ Watch]
+| 3 | [Boomerang Weapon](#3-boomerang-weapon) | [Shrinibas Mahanta](https://github.com/2k4sm) | Combat | [▶ Watch](https://drive.google.com/file/d/1l0nI4yFDL0mGm6XCnepZO4_hwL2DLGWC/view?usp=sharing) |
 | 64 | [Utils](#64-Utils) | [Shubham ](https://github.com/vijit101) | Core | [▶ Watch]() |
 (https://github.com/vijit101/UnityMechanicsFramework/tree/main/RuntimeMechanics/Dailogue/2.%20GenericAndScalableDialogueSystem/Assets/Video%20tutorial) |
 
@@ -320,6 +321,47 @@ dialogueSystem.StartDialogue(npcDatabase, onComplete: () =>
 
 ---
 
+### 3. Boomerang Weapon System
+
+| | |
+|---|---|
+| **Author** | [Shrinibas Mahanta](https://github.com/2k4sm) |
+| **Namespace** | `GameplayMechanicsUMFOSS.Combat` |
+| **Location** | `Runtime/Combat/3. BoomerangWeapon/BoomerangWeapon_UMFOSS.cs` |
+| **Category** | Combat |
+| **Demo Scene** | `Samples~/BoomerangWeapon/Assets/Scenes/RecallDemo.unity` |
+| **Video** | [▶ Watch Walkthrough](https://drive.google.com/file/d/1l0nI4yFDL0mGm6XCnepZO4_hwL2DLGWC/view?usp=sharing) |
+| **Demo ZIP** | [▶ Download](https://drive.google.com/file/d/1Z1Gpq7C4Dq6Iu50LSYw9tg6L3YpDoi0p/view?usp=sharing) |
+
+**What it does**
+
+A throw-and-recall weapon system inspired by God of War's Leviathan Axe. Throw any 3D object, embed it in walls or moving platforms, and recall it along a curved Bezier path back to the player's hand.
+
+**How to use it**
+
+```csharp
+using GameplayMechanicsUMFOSS.Combat;
+
+[SerializeField] private BoomerangWeapon_UMFOSS weapon;
+
+// Throw toward camera forward
+weapon.Throw(Camera.main.transform.forward);
+
+// Recall back to hand
+weapon.Recall();
+
+// React to events from anywhere
+EventBus.Subscribe<WeaponCaughtEvent>(e => Debug.Log("Caught!"));
+```
+
+**Highlights**
+
+- 4-state machine (Equipped, Thrown, Embedded, Recalling) with clean physics handoffs via IPhysicsAdapter
+- Bezier curve return path with accelerating speed for a satisfying catch
+- Parents to hit surfaces on impact, works with moving platforms out of the box
+
+---
+
 <!--
 ================================================================
 CONTRIBUTOR ENTRY TEMPLATE
@@ -378,7 +420,7 @@ All scripts use `GameplayMechanicsUMFOSS` as the base namespace, extended by fea
 | `GameplayMechanicsUMFOSS.Input` | InputAdapter | ✅ Active |
 | `GameplayMechanicsUMFOSS.Utils` | TimerUtility, helpers | ✅ Active |
 | `GameplayMechanicsUMFOSS.Inventory` | Item systems, loot, equipment | 🔓 Open for contribution |
-| `GameplayMechanicsUMFOSS.Combat` | Hitboxes, damage, status effects | 🔓 Open for contribution |
+| `GameplayMechanicsUMFOSS.Combat` | Boomerang weapon, damage, hitboxes | ✅ Active |
 | `GameplayMechanicsUMFOSS.UI` | HUD, menus, tooltips | 🔓 Open for contribution |
 | `GameplayMechanicsUMFOSS.AI` | Patrol, pathfinding, decisions | 🔓 Open for contribution |
 | `GameplayMechanicsUMFOSS.Systems` | Save/load, audio, scene management | 🔓 Open for contribution |
