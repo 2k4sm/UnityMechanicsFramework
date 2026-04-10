@@ -327,7 +327,7 @@ dialogueSystem.StartDialogue(npcDatabase, onComplete: () =>
 |---|---|
 | **Author** | [Shrinibas Mahanta](https://github.com/2k4sm) |
 | **Namespace** | `GameplayMechanicsUMFOSS.Combat` |
-| **Location** | `Runtime/Combat/3. BoomerangWeapon/BoomerangWeapon_UMFOSS.cs` |
+| **Location** | `Runtime/Combat/BoomerangWeapon/BoomerangWeapon_UMFOSS.cs` |
 | **Category** | Combat |
 | **Demo Scene** | `Samples~/BoomerangWeapon/Assets/Scenes/RecallDemo.unity` |
 | **Video** | [▶ Watch Walkthrough](https://drive.google.com/file/d/1l0nI4yFDL0mGm6XCnepZO4_hwL2DLGWC/view?usp=sharing) |

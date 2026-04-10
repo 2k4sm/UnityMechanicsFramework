@@ -21,7 +21,7 @@ DEPENDENCIES:
 
 ====================================================
 SCRIPT: BoomerangWeapon_UMFOSS.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/BoomerangWeapon_UMFOSS.cs
+FILE: Runtime/Combat/BoomerangWeapon/BoomerangWeapon_UMFOSS.cs
 ====================================================
 
 Code    : public class BoomerangWeapon_UMFOSS : MonoBehaviour
@@ -78,7 +78,7 @@ Explain : Public API for recall. Guards against recalling when already
 
 ====================================================
 SCRIPT: BoomerangConfig.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/BoomerangConfig.cs
+FILE: Runtime/Combat/BoomerangWeapon/BoomerangConfig.cs
 ====================================================
 
 Code    : [CreateAssetMenu(fileName = "NewBoomerangConfig", menuName = "UMF/Combat/Boomerang Config")]
@@ -109,7 +109,7 @@ Explain : Physics layers where the weapon embeds on collision. Walls,
 
 ====================================================
 SCRIPT: BoomerangContext.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/BoomerangContext.cs
+FILE: Runtime/Combat/BoomerangWeapon/BoomerangContext.cs
 ====================================================
 
 Code    : public class BoomerangContext
@@ -133,7 +133,7 @@ Explain : Stores collision data from ThrownState so EmbeddedState.Enter()
 
 ====================================================
 SCRIPT: BoomerangEvents.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/BoomerangEvents.cs
+FILE: Runtime/Combat/BoomerangWeapon/BoomerangEvents.cs
 ====================================================
 
 Code    : public struct WeaponThrownEvent
@@ -167,7 +167,7 @@ every publish, keeping the EventBus GC-friendly during gameplay.
 
 ====================================================
 SCRIPT: EquippedState.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/States/EquippedState.cs
+FILE: Runtime/Combat/BoomerangWeapon/States/EquippedState.cs
 ====================================================
 
 Code    : ctx.Physics.SetKinematic(true);
@@ -193,7 +193,7 @@ Explain : Snaps the weapon to exact hand position and neutral rotation.
 
 ====================================================
 SCRIPT: ThrownState.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/States/ThrownState.cs
+FILE: Runtime/Combat/BoomerangWeapon/States/ThrownState.cs
 ====================================================
 
 Code    : ctx.Transform.SetParent(null);
@@ -237,7 +237,7 @@ Explain : Stores the collision reference so EmbeddedState can access the
 
 ====================================================
 SCRIPT: EmbeddedState.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/States/EmbeddedState.cs
+FILE: Runtime/Combat/BoomerangWeapon/States/EmbeddedState.cs
 ====================================================
 
 Code    : ctx.Physics.SetKinematic(true);
@@ -270,7 +270,7 @@ Explain : Stops the spin immediately. The visual pivot's local rotation
 
 ====================================================
 SCRIPT: RecallingState.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/States/RecallingState.cs
+FILE: Runtime/Combat/BoomerangWeapon/States/RecallingState.cs
 ====================================================
 
 Code    : Vector3 worldPos = ctx.Transform.position;
@@ -327,7 +327,7 @@ Explain : Two catch conditions: distance-based (catches early if player
 
 ====================================================
 SCRIPT: HitDetector.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/HitDetector.cs
+FILE: Runtime/Combat/BoomerangWeapon/HitDetector.cs
 ====================================================
 
 Code    : private readonly HashSet<Collider> hitTargets = new HashSet<Collider>();
@@ -356,7 +356,7 @@ Explain : Uses GetComponentInParent to find the IDamageable interface on
 
 ====================================================
 SCRIPT: WeaponVisualHandler.cs
-FILE: Runtime/Combat/3. BoomerangWeapon/WeaponVisualHandler.cs
+FILE: Runtime/Combat/BoomerangWeapon/WeaponVisualHandler.cs
 ====================================================
 
 Code    : public class WeaponVisualHandler
