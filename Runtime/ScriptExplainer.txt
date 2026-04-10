@@ -2,8 +2,8 @@
 SCRIPT: Boomerang Weapon System (All Scripts)
 AUTHOR: Shrinibas Mahanta
 NAMESPACE: GameplayMechanicsUMFOSS.Combat
-VIDEO: https://drive.google.com/file/d/1l0nI4yFDL0mGm6XCnepZO4_hwL2DLGWC/view?usp=sharing
-DEMO ZIP: https://drive.google.com/file/d/1Z1Gpq7C4Dq6Iu50LSYw9tg6L3YpDoi0p/view?usp=sharing
+VIDEO: https://github.com/vijit101/UnityMechanicsFramework/tree/main/Samples~/BoomerangWeapon/BoomerangWeaponDemoVideo.zip
+ZIP: https://github.com/vijit101/UnityMechanicsFramework/tree/main/Samples~/BoomerangWeapon/BoomerangWeaponProject.zip
 ====================================================
 
 PURPOSE:

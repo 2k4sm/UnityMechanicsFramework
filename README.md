@@ -185,7 +185,7 @@ EventBus.Subscribe<PlayerJumpedEvent>(e => audioManager.PlayJumpSound());
 |---|---|---|---|---|
 | 1 | [MonoSingleton Generic](#1-monosingleton-generic) | Shubham B | Core | — |
 | 2 | [Generic & Scalable Dialogue System](#2-generic--scalable-dialogue-system) | Mayur | Dialogue | [▶ Watch]
-| 3 | [Boomerang Weapon](#3-boomerang-weapon) | [Shrinibas Mahanta](https://github.com/2k4sm) | Combat | [▶ Watch](https://drive.google.com/file/d/1l0nI4yFDL0mGm6XCnepZO4_hwL2DLGWC/view?usp=sharing) |
+| 3 | [Boomerang Weapon](#3-boomerang-weapon) | [Shrinibas Mahanta](https://github.com/2k4sm), [Shreyas Garg](https://github.com/shreyas-garg), [Sudharsan](https://github.com/Bug-Finderr) | Combat | [▶ Watch](https://github.com/vijit101/UnityMechanicsFramework/tree/main/Samples~/BoomerangWeapon/BoomerangWeaponDemoVideo.zip) |
 | 64 | [Utils](#64-Utils) | [Shubham ](https://github.com/vijit101) | Core | [▶ Watch]() |
 (https://github.com/vijit101/UnityMechanicsFramework/tree/main/RuntimeMechanics/Dailogue/2.%20GenericAndScalableDialogueSystem/Assets/Video%20tutorial) |
 
@@ -325,13 +325,12 @@ dialogueSystem.StartDialogue(npcDatabase, onComplete: () =>
 
 | | |
 |---|---|
-| **Author** | [Shrinibas Mahanta](https://github.com/2k4sm) |
+| **Author** | [Shrinibas Mahanta](https://github.com/2k4sm), [Shreyas Garg](https://github.com/shreyas-garg), [Sudharsan](https://github.com/Bug-Finderr) |
 | **Namespace** | `GameplayMechanicsUMFOSS.Combat` |
 | **Location** | `Runtime/Combat/BoomerangWeapon/BoomerangWeapon_UMFOSS.cs` |
 | **Category** | Combat |
 | **Demo Scene** | `Samples~/BoomerangWeapon/Assets/Scenes/RecallDemo.unity` |
-| **Video** | [▶ Watch Walkthrough](https://drive.google.com/file/d/1l0nI4yFDL0mGm6XCnepZO4_hwL2DLGWC/view?usp=sharing) |
-| **Demo ZIP** | [▶ Download](https://drive.google.com/file/d/1Z1Gpq7C4Dq6Iu50LSYw9tg6L3YpDoi0p/view?usp=sharing) |
+| **Video** | [▶ Watch Walkthrough](https://github.com/vijit101/UnityMechanicsFramework/tree/main/Samples~/BoomerangWeapon/BoomerangWeaponDemoVideo.zip) |
 
 **What it does**
 
