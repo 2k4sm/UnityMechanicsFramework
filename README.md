@@ -185,7 +185,7 @@ EventBus.Subscribe<PlayerJumpedEvent>(e => audioManager.PlayJumpSound());
 |---|---|---|---|---|
 | 1 | [MonoSingleton Generic](#1-monosingleton-generic) | Shubham B | Core | — |
 | 2 | [Generic & Scalable Dialogue System](#2-generic--scalable-dialogue-system) | Mayur | Dialogue | [▶ Watch]
-| 3 | [Boomerang Weapon](#3-boomerang-weapon) | [Shrinibas Mahanta](https://github.com/2k4sm), [Shreyas Garg](https://github.com/shreyas-garg), [Sudharsan](https://github.com/Bug-Finderr) | Combat | [▶ Watch](https://github.com/vijit101/UnityMechanicsFramework/tree/main/Samples~/BoomerangWeapon/BoomerangWeaponDemoVideo.zip) |
+| 27 | [Boomerang Weapon](#27-boomerang-weapon-system) | [Shrinibas Mahanta](https://github.com/2k4sm), [Shreyas Garg](https://github.com/shreyas-garg), [Sudharsan](https://github.com/Bug-Finderr) | Combat | [▶ Watch](https://github.com/vijit101/UnityMechanicsFramework/tree/main/Samples~/BoomerangWeapon/BoomerangWeaponDemoVideo.zip) |
 | 64 | [Utils](#64-Utils) | [Shubham ](https://github.com/vijit101) | Core | [▶ Watch]() |
 (https://github.com/vijit101/UnityMechanicsFramework/tree/main/RuntimeMechanics/Dailogue/2.%20GenericAndScalableDialogueSystem/Assets/Video%20tutorial) |
 
@@ -277,6 +277,46 @@ dialogueSystem.StartDialogue(npcDatabase, onComplete: () =>
 
 ---
 
+### 27. Boomerang Weapon System
+
+| | |
+|---|---|
+| **Author** | [Shrinibas Mahanta](https://github.com/2k4sm), [Shreyas Garg](https://github.com/shreyas-garg), [Sudharsan](https://github.com/Bug-Finderr) |
+| **Namespace** | `GameplayMechanicsUMFOSS.Combat` |
+| **Location** | `Runtime/Combat/BoomerangWeapon/BoomerangWeapon_UMFOSS.cs` |
+| **Category** | Combat |
+| **Demo Scene** | `Samples~/BoomerangWeapon/Assets/Scenes/RecallDemo.unity` |
+| **Video** | [▶ Watch Walkthrough](https://github.com/vijit101/UnityMechanicsFramework/tree/main/Samples~/BoomerangWeapon/BoomerangWeaponDemoVideo.zip) |
+
+**What it does**
+
+A throw-and-recall weapon system inspired by God of War's Leviathan Axe. Throw any 3D object, embed it in walls or moving platforms, and recall it along a curved Bezier path back to the player's hand.
+
+**How to use it**
+
+```csharp
+using GameplayMechanicsUMFOSS.Combat;
+
+[SerializeField] private BoomerangWeapon_UMFOSS weapon;
+
+// Throw toward camera forward
+weapon.Throw(Camera.main.transform.forward);
+
+// Recall back to hand
+weapon.Recall();
+
+// React to events from anywhere
+EventBus.Subscribe<WeaponCaughtEvent>(e => Debug.Log("Caught!"));
+```
+
+**Highlights**
+
+- 4-state machine (Equipped, Thrown, Embedded, Recalling) with clean physics handoffs via IPhysicsAdapter
+- Bezier curve return path with accelerating speed for a satisfying catch
+- Parents to hit surfaces on impact, works with moving platforms out of the box
+
+---
+
 ### 64 . Utils
 
 | | |
@@ -318,46 +358,6 @@ dialogueSystem.StartDialogue(npcDatabase, onComplete: () =>
 - Clean separation between data (`DialogueDatabase`) and logic (`DialogueSystem`)
 - Add new conversations without touching any existing scripts
 - Scales to large narrative systems without architectural changes
-
----
-
-### 3. Boomerang Weapon System
-
-| | |
-|---|---|
-| **Author** | [Shrinibas Mahanta](https://github.com/2k4sm), [Shreyas Garg](https://github.com/shreyas-garg), [Sudharsan](https://github.com/Bug-Finderr) |
-| **Namespace** | `GameplayMechanicsUMFOSS.Combat` |
-| **Location** | `Runtime/Combat/BoomerangWeapon/BoomerangWeapon_UMFOSS.cs` |
-| **Category** | Combat |
-| **Demo Scene** | `Samples~/BoomerangWeapon/Assets/Scenes/RecallDemo.unity` |
-| **Video** | [▶ Watch Walkthrough](https://github.com/vijit101/UnityMechanicsFramework/tree/main/Samples~/BoomerangWeapon/BoomerangWeaponDemoVideo.zip) |
-
-**What it does**
-
-A throw-and-recall weapon system inspired by God of War's Leviathan Axe. Throw any 3D object, embed it in walls or moving platforms, and recall it along a curved Bezier path back to the player's hand.
-
-**How to use it**
-
-```csharp
-using GameplayMechanicsUMFOSS.Combat;
-
-[SerializeField] private BoomerangWeapon_UMFOSS weapon;
-
-// Throw toward camera forward
-weapon.Throw(Camera.main.transform.forward);
-
-// Recall back to hand
-weapon.Recall();
-
-// React to events from anywhere
-EventBus.Subscribe<WeaponCaughtEvent>(e => Debug.Log("Caught!"));
-```
-
-**Highlights**
-
-- 4-state machine (Equipped, Thrown, Embedded, Recalling) with clean physics handoffs via IPhysicsAdapter
-- Bezier curve return path with accelerating speed for a satisfying catch
-- Parents to hit surfaces on impact, works with moving platforms out of the box
 
 ---
 
